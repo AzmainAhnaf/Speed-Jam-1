@@ -5,12 +5,13 @@ const SPEED = 150
 const JUMP_VELOCITY = -200.0
 const ACCELERATION = 20
 const PUSH = 20
+@export var is_on_ladder = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _physics_process(delta):
 	# Add the gravity.
-	if not is_on_floor():
+	if not is_on_floor() and not is_on_ladder:
 		velocity.y += gravity * delta
 		
 	# Detect collisions with Movable Object
@@ -19,9 +20,17 @@ func _physics_process(delta):
 		var collider = collision.get_collider()
 		if collider is MovableBody:
 			collider.apply_central_impulse(-collision.get_normal() * PUSH)
+			
+	# Detect if there is any ladder
+	if (is_on_ladder):
+		velocity.y = 0
+		if Input.is_action_pressed("Up"):
+			velocity.y = -20
+		elif Input.is_action_pressed("Down"):
+			velocity.y = 20
 
 	# Handle jump.
-	if Input.is_action_just_pressed("Jump") and is_on_floor():
+	if Input.is_action_just_pressed("Jump") and (is_on_floor() or is_on_ladder):
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
