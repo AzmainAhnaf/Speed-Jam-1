@@ -7,7 +7,7 @@
 size = Vector2(4, 4)
 
 [node name="RigidBody2D" type="RigidBody2D"]
-mass = 0.1
+mass = 0.2
 script = ExtResource("1_8olgx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

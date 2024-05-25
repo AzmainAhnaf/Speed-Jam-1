@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://ccsgrrqmusfgb"]
+[gd_scene load_steps=8 format=3 uid="uid://ccsgrrqmusfgb"]
 
 [ext_resource type="Script" path="res://scripts/restart.gd" id="1_jek2o"]
 [ext_resource type="PackedScene" uid="uid://dbec3d5jx4ugc" path="res://scenes/player.tscn" id="1_uouon"]
 [ext_resource type="Texture2D" uid="uid://src50b5lkno5" path="res://assets/sprites/Tileset.png" id="2_vbvfb"]
 [ext_resource type="PackedScene" uid="uid://iimeofyns3k8" path="res://scenes/small_box.tscn" id="3_dsomg"]
+[ext_resource type="PackedScene" uid="uid://ckelbqcvomnd5" path="res://scenes/box.tscn" id="5_ab147"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhgqg"]
 resource_name = "white_tiles"
@@ -162,34 +163,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(327670, 0, 0, 327671, 65536, 0, 327672, 0, 0, 327673, 65536, 0, 327674, 0, 0, 327675, 65536, 0, 327676, 0, 0, 327677, 65536, 0, 327678, 0, 0, 327679, 65536, 0, 262144, 0, 0, 262145, 65536, 0, 262146, 0, 0, 262147, 65536, 0, 262148, 0, 0, 262149, 65536, 0, 262150, 0, 0, 262154, 0, 0, 262155, 65536, 0, 262156, 0, 0, 262157, 65536, 0, 262158, 0, 0, 262159, 65536, 0, 262160, 0, 0, 262161, 65536, 0, 262162, 0, 0, 262163, 65536, 0, 262164, 0, 0, 262165, 65536, 0, 262166, 0, 0, 262167, 65536, 0, 262168, 0, 0, 262169, 65536, 0, 262170, 0, 0, 262171, 65536, 0, 262172, 0, 0, 262173, 65536, 0, 262174, 0, 0, 262175, 65536, 0, 262176, 0, 0, 262177, 65536, 0, 262178, 0, 0, 262179, 65536, 0, 262180, 0, 0, 262181, 65536, 0, 262182, 0, 0, 262183, 65536, 0, 262184, 0, 0, 262185, 65536, 0, 262186, 0, 0, 262187, 65536, 0, 262188, 0, 0, 262189, 65536, 0, 262190, 0, 0, 262191, 65536, 0, 262192, 0, 0, 262193, 65536, 0, 262194, 0, 0, 262195, 65536, 0, 262196, 0, 0, 262197, 65536, 0, 262198, 0, 0, 262199, 65536, 0, 262200, 0, 0, 262201, 65536, 0, 262202, 0, 0, 262203, 65536, 0, 262204, 0, 0, 262205, 65536, 0, 262206, 0, 0, 262207, 65536, 0, 262208, 0, 0, 262209, 65536, 0, 262210, 0, 0, 262211, 65536, 0, 196674, 131072, 0, 196675, 131072, 0, 131139, 131072, 0, 131138, 131072, 0, 131140, 131072, 0, 196673, 131072, 0, 65602, 131072, 0, 65603, 131072, 0, 196676, 131072, 0, 65604, 131072, 0, 131141, 131072, 0, 196677, 131072, 0, 262134, 131072, 0, 196598, 131072, 0, 131062, 131072, 0, 131061, 131072, 0, 196597, 131072, 0, 262133, 131072, 0, 327669, 131072, 0, 327686, 0, 0, 393222, 0, 0, 458758, 0, 0, 524294, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 524298, 0, 0, 458762, 0, 0, 393226, 0, 0, 327690, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0)
 
 [node name="RigidBody2D" parent="." instance=ExtResource("3_dsomg")]
-position = Vector2(140, 86)
+position = Vector2(277, 84)
 
-[node name="RigidBody2D2" parent="." instance=ExtResource("3_dsomg")]
-position = Vector2(152, 86)
-
-[node name="RigidBody2D3" parent="." instance=ExtResource("3_dsomg")]
-position = Vector2(167, 86)
-
-[node name="RigidBody2D4" parent="." instance=ExtResource("3_dsomg")]
-position = Vector2(182, 86)
-
-[node name="RigidBody2D5" parent="." instance=ExtResource("3_dsomg")]
-position = Vector2(197, 86)
-
-[node name="RigidBody2D6" parent="." instance=ExtResource("3_dsomg")]
-position = Vector2(207, 86)
-
-[node name="RigidBody2D7" parent="." instance=ExtResource("3_dsomg")]
-position = Vector2(222, 86)
-
-[node name="RigidBody2D8" parent="." instance=ExtResource("3_dsomg")]
-position = Vector2(237, 86)
-
-[node name="RigidBody2D9" parent="." instance=ExtResource("3_dsomg")]
-position = Vector2(256, 86)
-
-[node name="RigidBody2D10" parent="." instance=ExtResource("3_dsomg")]
-position = Vector2(274, 86)
-
-[node name="RigidBody2D11" parent="." instance=ExtResource("3_dsomg")]
-position = Vector2(292, 86)
+[node name="Box" parent="." instance=ExtResource("5_ab147")]
+position = Vector2(137, 83)
