@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ccsgrrqmusfgb"]
+[gd_scene load_steps=12 format=3 uid="uid://ccsgrrqmusfgb"]
 
 [ext_resource type="Script" path="res://scripts/restart.gd" id="1_jek2o"]
 [ext_resource type="PackedScene" uid="uid://dbec3d5jx4ugc" path="res://scenes/player.tscn" id="1_uouon"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ckelbqcvomnd5" path="res://scenes/box.tscn" id="5_ab147"]
 [ext_resource type="PackedScene" uid="uid://b7u2hpgd0ijjs" path="res://scenes/big_box.tscn" id="6_5mqi7"]
 [ext_resource type="PackedScene" uid="uid://cn04chs47h1fs" path="res://scenes/killzone.tscn" id="7_qf34e"]
+[ext_resource type="PackedScene" uid="uid://cvo8423f5g20c" path="res://scenes/enemy.tscn" id="8_o85t6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhgqg"]
 resource_name = "white_tiles"
@@ -180,3 +181,6 @@ position = Vector2(414, 81)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(262, 175)
 shape = SubResource("WorldBoundaryShape2D_nix50")
+
+[node name="Enemy" parent="." instance=ExtResource("8_o85t6")]
+position = Vector2(333, 84)

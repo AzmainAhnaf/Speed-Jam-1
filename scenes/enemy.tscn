@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvo8423f5g20c"]
+
+[ext_resource type="Texture2D" uid="uid://xqjmp7k745ks" path="res://assets/sprites/Enemy.jpeg" id="1_al4a0"]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_yavg3"]
+[ext_resource type="PackedScene" uid="uid://cn04chs47h1fs" path="res://scenes/killzone.tscn" id="2_k3j7c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tgoi5"]
+size = Vector2(6, 7)
+
+[node name="Enemy" type="Node2D"]
+position = Vector2(6, 5)
+script = ExtResource("1_yavg3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_al4a0")
+
+[node name="Killzone" parent="." instance=ExtResource("2_k3j7c")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_tgoi5")
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-6, 0)
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(6, 0)
