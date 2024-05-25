@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://ccsgrrqmusfgb"]
+[gd_scene load_steps=9 format=3 uid="uid://ccsgrrqmusfgb"]
 
 [ext_resource type="Script" path="res://scripts/restart.gd" id="1_jek2o"]
 [ext_resource type="PackedScene" uid="uid://dbec3d5jx4ugc" path="res://scenes/player.tscn" id="1_uouon"]
 [ext_resource type="Texture2D" uid="uid://src50b5lkno5" path="res://assets/sprites/Tileset.png" id="2_vbvfb"]
 [ext_resource type="PackedScene" uid="uid://iimeofyns3k8" path="res://scenes/small_box.tscn" id="3_dsomg"]
 [ext_resource type="PackedScene" uid="uid://ckelbqcvomnd5" path="res://scenes/box.tscn" id="5_ab147"]
+[ext_resource type="PackedScene" uid="uid://b7u2hpgd0ijjs" path="res://scenes/big_box.tscn" id="6_5mqi7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhgqg"]
 resource_name = "white_tiles"
@@ -167,3 +168,6 @@ position = Vector2(277, 84)
 
 [node name="Box" parent="." instance=ExtResource("5_ab147")]
 position = Vector2(137, 83)
+
+[node name="Big Box" parent="." instance=ExtResource("6_5mqi7")]
+position = Vector2(414, 81)

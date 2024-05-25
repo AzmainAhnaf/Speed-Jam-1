@@ -18,11 +18,7 @@ func _physics_process(delta):
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
 		if collider is MovableBody:
-			print("Working...")
-			print(collision.get_normal())
 			collider.apply_central_impulse(-collision.get_normal() * PUSH)
-		else:
-			print("gojo")
 
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():

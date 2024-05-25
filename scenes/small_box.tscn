@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8nu7b"]
 size = Vector2(4, 4)
 
-[node name="RigidBody2D" type="RigidBody2D"]
+[node name="Small Box" type="RigidBody2D"]
 mass = 0.2
 script = ExtResource("1_8olgx")
 
