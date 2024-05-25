@@ -146,4 +146,3 @@ position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_vj8at")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
