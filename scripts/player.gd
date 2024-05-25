@@ -25,9 +25,9 @@ func _physics_process(delta):
 	if (is_on_ladder):
 		velocity.y = 0
 		if Input.is_action_pressed("Up"):
-			velocity.y = -20
+			velocity.y = -30
 		elif Input.is_action_pressed("Down"):
-			velocity.y = 20
+			velocity.y = 30
 
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and (is_on_floor() or is_on_ladder):
