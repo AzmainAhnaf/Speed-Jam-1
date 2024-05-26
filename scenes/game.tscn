@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cn04chs47h1fs" path="res://scenes/killzone.tscn" id="7_qf34e"]
 [ext_resource type="PackedScene" uid="uid://cvo8423f5g20c" path="res://scenes/enemy.tscn" id="8_o85t6"]
 [ext_resource type="PackedScene" uid="uid://b2o6i2pdkxx5i" path="res://scenes/ladder.tscn" id="8_ogqs8"]
-[ext_resource type="Texture2D" uid="uid://duf05t710k6sp" path="res://assets/sprites/ladder.png" id="8_tkxos"]
+[ext_resource type="Texture2D" uid="uid://duf05t710k6sp" path="res://assets/sprites/Ladder.png" id="8_tkxos"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhgqg"]
 resource_name = "white_tiles"
