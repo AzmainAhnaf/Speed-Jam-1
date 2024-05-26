@@ -90,7 +90,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vj8at"]
-size = Vector2(6, 7)
+size = Vector2(3, 7)
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
@@ -100,9 +100,9 @@ script = ExtResource("1_2dgsp")
 z_index = 5
 z_as_relative = false
 sprite_frames = SubResource("SpriteFrames_s54oa")
-animation = &"Climb"
+animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.5)
+position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_vj8at")

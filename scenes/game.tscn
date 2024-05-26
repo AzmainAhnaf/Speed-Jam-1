@@ -1,13 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://ccsgrrqmusfgb"]
+[gd_scene load_steps=13 format=3 uid="uid://ccsgrrqmusfgb"]
 
 [ext_resource type="Script" path="res://scripts/restart.gd" id="1_jek2o"]
 [ext_resource type="PackedScene" uid="uid://dbec3d5jx4ugc" path="res://scenes/player.tscn" id="1_uouon"]
 [ext_resource type="Texture2D" uid="uid://src50b5lkno5" path="res://assets/sprites/Tileset.png" id="2_vbvfb"]
 [ext_resource type="PackedScene" uid="uid://b7u2hpgd0ijjs" path="res://scenes/big_box.tscn" id="6_5mqi7"]
-[ext_resource type="Texture2D" uid="uid://cfufx6redkap" path="res://assets/sprites/ladder.png" id="7_pwljt"]
 [ext_resource type="PackedScene" uid="uid://cn04chs47h1fs" path="res://scenes/killzone.tscn" id="7_qf34e"]
 [ext_resource type="PackedScene" uid="uid://cvo8423f5g20c" path="res://scenes/enemy.tscn" id="8_o85t6"]
 [ext_resource type="PackedScene" uid="uid://b2o6i2pdkxx5i" path="res://scenes/ladder.tscn" id="8_ogqs8"]
+[ext_resource type="Texture2D" uid="uid://duf05t710k6sp" path="res://assets/sprites/Ladder.png" id="8_tkxos"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhgqg"]
 resource_name = "white_tiles"
@@ -149,11 +149,8 @@ sources/0 = SubResource("TileSetAtlasSource_fhgqg")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nix50"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2oh2e"]
-size = Vector2(10, 58)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sm0t8"]
-size = Vector2(8, 39)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a0r52"]
+size = Vector2(8, 54)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_jek2o")
@@ -186,31 +183,16 @@ position = Vector2(202, 34)
 
 [node name="Ladders" type="Node" parent="."]
 
-[node name="Ladder" parent="Ladders" instance=ExtResource("8_ogqs8")]
-position = Vector2(395, 62)
-
-[node name="Sprite2D" type="Sprite2D" parent="Ladders/Ladder"]
-position = Vector2(0, 6)
-texture = ExtResource("7_pwljt")
-region_enabled = true
-region_rect = Rect2(0, 0, 10, 59)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ladders/Ladder"]
-position = Vector2(0, 6)
-shape = SubResource("RectangleShape2D_2oh2e")
-
-[node name="Ladder2" parent="Ladders" instance=ExtResource("8_ogqs8")]
-position = Vector2(466, 22)
-
-[node name="Sprite2D" type="Sprite2D" parent="Ladders/Ladder2"]
-position = Vector2(0, 7)
-texture = ExtResource("7_pwljt")
-region_enabled = true
-region_rect = Rect2(0, 0, 10, 39)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ladders/Ladder2"]
-position = Vector2(0, 6.5)
-shape = SubResource("RectangleShape2D_sm0t8")
-
 [node name="Enemy" parent="." instance=ExtResource("8_o85t6")]
 position = Vector2(559, 43)
+
+[node name="Ladder" parent="." instance=ExtResource("8_ogqs8")]
+position = Vector2(394, 70)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ladder"]
+texture = ExtResource("8_tkxos")
+region_enabled = true
+region_rect = Rect2(0, 0, 10, 54)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ladder"]
+shape = SubResource("RectangleShape2D_a0r52")
