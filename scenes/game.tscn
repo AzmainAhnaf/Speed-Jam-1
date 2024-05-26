@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ccsgrrqmusfgb"]
+[gd_scene load_steps=14 format=3 uid="uid://ccsgrrqmusfgb"]
 
 [ext_resource type="Script" path="res://scripts/restart.gd" id="1_jek2o"]
 [ext_resource type="PackedScene" uid="uid://dbec3d5jx4ugc" path="res://scenes/player.tscn" id="1_uouon"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cvo8423f5g20c" path="res://scenes/enemy.tscn" id="8_o85t6"]
 [ext_resource type="PackedScene" uid="uid://b2o6i2pdkxx5i" path="res://scenes/ladder.tscn" id="8_ogqs8"]
 [ext_resource type="Texture2D" uid="uid://duf05t710k6sp" path="res://assets/sprites/Ladder.png" id="8_tkxos"]
+[ext_resource type="PackedScene" uid="uid://c5g0udt6yyda2" path="res://scenes/checkpoint.tscn" id="9_er8gr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhgqg"]
 resource_name = "white_tiles"
@@ -197,3 +198,6 @@ shape = SubResource("RectangleShape2D_a0r52")
 
 [node name="Enemy" parent="." instance=ExtResource("8_o85t6")]
 position = Vector2(1, -76)
+
+[node name="Checkpoint" parent="." instance=ExtResource("9_er8gr")]
+position = Vector2(230, 6)

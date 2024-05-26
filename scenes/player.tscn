@@ -119,8 +119,8 @@ drag_top_margin = 0.4
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(-73, -36)
-motion_scale = Vector2(0.1, 0.1)
+position = Vector2(-72, -16)
+motion_scale = Vector2(0.2, 0)
 motion_mirroring = Vector2(200, 110)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]

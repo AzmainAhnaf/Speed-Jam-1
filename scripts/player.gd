@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var ACCELERATION = 20.0
 @export var PUSH = 20
 @export var is_on_ladder = false
+@export var is_inside_checkpoint = false
 
 @onready var animated_sprite = $AnimatedSprite2D
 
