@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
 
-const SPEED = 150
-const JUMP_VELOCITY = -200.0
-const ACCELERATION = 20
-const PUSH = 20
+@export var SPEED = 150.0
+@export var JUMP_VELOCITY = -200.0
+@export var ACCELERATION = 20.0
+@export var PUSH = 20
 @export var is_on_ladder = false
 
 @onready var animated_sprite = $AnimatedSprite2D
