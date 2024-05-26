@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cn04chs47h1fs" path="res://scenes/killzone.tscn" id="7_qf34e"]
 [ext_resource type="PackedScene" uid="uid://cvo8423f5g20c" path="res://scenes/enemy.tscn" id="8_o85t6"]
 [ext_resource type="PackedScene" uid="uid://b2o6i2pdkxx5i" path="res://scenes/ladder.tscn" id="8_ogqs8"]
-[ext_resource type="Texture2D" uid="uid://duf05t710k6sp" path="res://assets/sprites/Ladder.png" id="8_tkxos"]
+[ext_resource type="Texture2D" uid="uid://duf05t710k6sp" path="res://assets/sprites/ladder.png" id="8_tkxos"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhgqg"]
 resource_name = "white_tiles"
@@ -150,7 +150,7 @@ sources/0 = SubResource("TileSetAtlasSource_fhgqg")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nix50"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a0r52"]
-size = Vector2(8, 54)
+size = Vector2(10.7455, 54.0902)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_jek2o")
@@ -163,7 +163,6 @@ layer_0/tile_data = PackedInt32Array(196603, 393216, 2, 196604, 393216, 2, 19660
 
 [node name="Player" parent="." instance=ExtResource("1_uouon")]
 position = Vector2(98, 57)
-ACCELERATION = 20
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-1, -2)
@@ -195,5 +194,16 @@ texture = ExtResource("8_tkxos")
 region_enabled = true
 region_rect = Rect2(0, 0, 10, 54)
 
+[node name="Sprite2D" type="Sprite2D" parent="Ladder/Sprite2D"]
+position = Vector2(72, -39)
+scale = Vector2(1, 0.682122)
+texture = ExtResource("8_tkxos")
+region_enabled = true
+region_rect = Rect2(0, 0, 10, 54)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ladder"]
+shape = SubResource("RectangleShape2D_a0r52")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ladder"]
+position = Vector2(72, -31)
 shape = SubResource("RectangleShape2D_a0r52")
