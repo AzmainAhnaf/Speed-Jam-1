@@ -7,6 +7,9 @@ const ACCELERATION = 20
 const PUSH = 20
 @export var is_on_ladder = false
 
+@onready var animated_sprite = $AnimatedSprite2D
+
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _physics_process(delta):
@@ -37,8 +40,24 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	if Input.is_action_pressed("Move_right"):
 		velocity.x = min(velocity.x + ACCELERATION, SPEED)
+		animated_sprite.flip_h = false
 	elif Input.is_action_pressed("Move_left"):
 		velocity.x = max(velocity.x - ACCELERATION, -SPEED)
+		animated_sprite.flip_h = true
 	else:
 		velocity.x = lerp(velocity.x, 0.0, 0.1)
+	
+	
+	# Playing player animations
+	if is_on_ladder and Input.is_action_pressed("Is_climbing"):
+		animated_sprite.play("Climb")
+	elif is_on_ladder:
+		animated_sprite.play("Climb_idle")
+	elif not is_on_floor():
+		animated_sprite.play("Jump")
+	elif velocity.x != 0 and not is_on_ladder:
+		animated_sprite.play("Run")
+	else:
+		animated_sprite.play("Idle")
+		
 	move_and_slide()
