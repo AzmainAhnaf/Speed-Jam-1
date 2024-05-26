@@ -1,0 +1,20 @@
+extends Control
+
+
+
+
+func _on_play_pressed():
+	get_tree().change_scene_to_file("res://scenes/game.tscn")
+	
+
+
+
+func _on_credits_pressed():
+	print("Loading credit scenes")
+	
+	
+
+
+
+func _on_exit_pressed():
+	get_tree().quit()
