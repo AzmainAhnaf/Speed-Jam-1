@@ -1,10 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://dbec3d5jx4ugc"]
+[gd_scene load_steps=15 format=3 uid="uid://dbec3d5jx4ugc"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_2dgsp"]
 [ext_resource type="Texture2D" uid="uid://ch8h0u41km2qg" path="res://assets/sprites/player_run.png" id="2_3kmud"]
 [ext_resource type="Texture2D" uid="uid://c485qsu05f8g3" path="res://assets/sprites/player_climb.png" id="2_cyuxc"]
 [ext_resource type="Texture2D" uid="uid://bvm1i8xx6tkt3" path="res://assets/sprites/player_jump.png" id="3_qsbfs"]
-[ext_resource type="Texture2D" uid="uid://c3m4ulp11pj7k" path="res://assets/backgrounds/city_pixel.png" id="5_cds3j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h3chg"]
 atlas = ExtResource("2_cyuxc")
@@ -125,5 +124,4 @@ motion_mirroring = Vector2(200, 110)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 z_index = -5
-texture = ExtResource("5_cds3j")
 centered = false

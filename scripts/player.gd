@@ -7,6 +7,8 @@ extends CharacterBody2D
 @export var PUSH = 20
 @export var is_on_ladder = false
 @export var is_inside_checkpoint = false
+@export var last_saved_place_x = 35
+@export var last_saved_place_y = 60
 
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -17,7 +19,14 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor() and not is_on_ladder:
 		velocity.y += gravity * delta
-		
+	
+	# Working Checkpoint
+	if is_inside_checkpoint and Input.is_action_just_pressed("Save"):
+		last_saved_place_x = position.x
+		last_saved_place_y = position.y
+		print("game saved")
+		is_inside_checkpoint = false
+	
 	# Detect collisions with Movable Object
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
@@ -46,8 +55,7 @@ func _physics_process(delta):
 		velocity.x = max(velocity.x - ACCELERATION, -SPEED)
 		animated_sprite.flip_h = true
 	else:
-		velocity.x = lerp(velocity.x, 0.0, 0.1)
-	
+		velocity.x = lerp(velocity.x, 0.0, 0.2)
 	
 	# Playing player animations
 	if is_on_ladder and Input.is_action_pressed("Is_climbing"):
