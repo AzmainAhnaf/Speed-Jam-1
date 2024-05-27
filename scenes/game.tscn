@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ccsgrrqmusfgb"]
+[gd_scene load_steps=16 format=3 uid="uid://ccsgrrqmusfgb"]
 
 [ext_resource type="Script" path="res://scripts/restart.gd" id="1_jek2o"]
 [ext_resource type="PackedScene" uid="uid://dbec3d5jx4ugc" path="res://scenes/player.tscn" id="1_uouon"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://b2o6i2pdkxx5i" path="res://scenes/ladder.tscn" id="8_ogqs8"]
 [ext_resource type="Texture2D" uid="uid://duf05t710k6sp" path="res://assets/sprites/Ladder.png" id="8_tkxos"]
 [ext_resource type="PackedScene" uid="uid://c5g0udt6yyda2" path="res://scenes/checkpoint.tscn" id="9_er8gr"]
+[ext_resource type="PackedScene" uid="uid://b7iieflxf25r8" path="res://scenes/platform_big.tscn" id="10_ojqeu"]
+[ext_resource type="PackedScene" uid="uid://ci6j525n6mca3" path="res://scenes/platform_small.tscn" id="11_y8o3a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhgqg"]
 resource_name = "white_tiles"
@@ -201,3 +203,9 @@ position = Vector2(1, -76)
 
 [node name="Checkpoint" parent="." instance=ExtResource("9_er8gr")]
 position = Vector2(230, 6)
+
+[node name="Platform Big" parent="." instance=ExtResource("10_ojqeu")]
+position = Vector2(370, -129)
+
+[node name="Platform Small" parent="." instance=ExtResource("11_y8o3a")]
+position = Vector2(374, -137)
