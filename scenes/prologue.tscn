@@ -1,6 +1,7 @@
-[gd_scene load_steps=23 format=3 uid="uid://dmohx8b2jis6o"]
+[gd_scene load_steps=24 format=3 uid="uid://dmohx8b2jis6o"]
 
 [ext_resource type="Texture2D" uid="uid://dxn1vd4viulm" path="res://assets/backgrounds/mountain_animation-Sheet.png" id="1_tqkru"]
+[ext_resource type="Script" path="res://scenes/prologue.gd" id="1_x6ohi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ag1q3"]
 atlas = ExtResource("1_tqkru")
@@ -153,6 +154,7 @@ animations = [{
 [node name="Camera2D" type="Camera2D"]
 position = Vector2(581, 329)
 zoom = Vector2(8, 8)
+script = ExtResource("1_x6ohi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_lpuai")
@@ -165,3 +167,6 @@ offset_right = 100.0
 offset_bottom = 55.0
 theme_override_font_sizes/font_size = 10
 text = "quit"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
