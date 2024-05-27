@@ -37,7 +37,9 @@ text = "Exit Game"
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Don't worry This is just a Temporary Main Menu"
+text = "Don't worry This is just a Temporary Main Menu.
+P.S.: Didn't have enough time to change the Menu
+Enjoy the game :\")"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]

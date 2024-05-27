@@ -10,7 +10,7 @@ func _on_play_pressed():
 
 
 func _on_credits_pressed():
-	print("Loading credit scenes")
+	get_tree().change_scene_to_file("res://scenes/credit.tscn")
 
 
 
