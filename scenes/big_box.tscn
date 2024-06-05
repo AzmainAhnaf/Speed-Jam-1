@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7u2hpgd0ijjs"]
+
+[ext_resource type="Script" path="res://scripts/small_box.gd" id="1_86ni6"]
+[ext_resource type="Texture2D" uid="uid://bhqu71gnr0x7l" path="res://assets/sprites/big_box.png" id="2_54ybo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uk0e2"]
+size = Vector2(12, 12)
+
+[node name="Big Box" type="RigidBody2D"]
+position = Vector2(11, 7)
+mass = 0.6
+script = ExtResource("1_86ni6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_54ybo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_uk0e2")
